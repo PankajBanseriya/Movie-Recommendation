@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background-image: url(background.webp);
+    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #fff;
+}
+
+#genreForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#genreForm label {
+    font-size: 32px;
+    font-weight: 700;
+    background: -webkit-linear-gradient(left, #ff595e, #ff924c, #ffca3a, #c5ca30, #8ac926, #52a675, #1982c4, #4267ac, #6a4c93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#genreForm select {
+    width: 250px;
+    height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 7px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+
+#search-btn {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playBtn {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff595e, #ff924c, #ffca3a, #c5ca30, #8ac926, #52a675, #1982c4, #4267ac, #6a4c93);
+    color: #000;
+}
+
+#likeOrDislikeBtns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    align-items: center;
+    display: none;
+    overflow: hidden;
+}
+
+#likeBtn {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff595e, #ff924c, #ffca3a, #c5ca30, #8ac926, #52a675, #1982c4, #4267ac, #6a4c93);
+    color: #000;
+}
+
+main {
+    margin: 0px 50px;
+    display: grid;
+    gap: 30px;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.movieInfo {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    /* justify-content: center; */
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    display: none;
+}
+
+.movieInfo>div {
+    width: 100%;
+    text-align: center;
+}
+
+.movieInfo p {
+    text-align: start;
+}
+
+img {
+    height: 400px;
+    width: 100%;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(left, #ff595e, #ff924c, #ffca3a, #c5ca30, #8ac926, #52a675, #1982c4, #4267ac, #6a4c93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 1024px) {
+    img {
+        height: 300px;
+    }
+
+    #genreForm select option {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 750px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    #genreForm label {
+        font-size: 24px;
+    }
+
+    #genreForm select {
+        width: 200px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        height: 500px;
+    }
+    h2{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    #genreForm label {
+        font-size: 16px;
+    }
+
+    #genreForm select option{
+        width: 200px;
+        height: 25px;
+    }
+     img {
+        height: 300px;
+    }
+    main{
+        margin: 0px 20px;
+    }
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 375px){
+    .movieInfo{
+        padding: 10px;
+    }
+}
